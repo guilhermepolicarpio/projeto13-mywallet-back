@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors'
-import userRouter from "./routers/userRouter.js"
+import userRouter from "./src/routers/userRouter.js"
 
 const server = express();
 server.use(cors());
