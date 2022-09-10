@@ -4,7 +4,7 @@ dotenv.config();
 
 const mongoClient = new MongoClient(process.env.MONGO_URI);
 
-const promise = mongoClient.connect();
+await mongoClient.connect();
 
 const db = mongoClient.db("dbprojectmywallet")
 
