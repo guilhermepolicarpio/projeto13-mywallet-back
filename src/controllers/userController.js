@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 import { v4 as uuid} from "uuid";
-import db from "../db.js";
+import db  from "../db.js";
 
 
 export async function signIn(req, res){
@@ -13,7 +13,8 @@ export async function signIn(req, res){
 
         await db.collection("sessions").insertOne({
             userId: user._id,
-            token
+            token,
+            name: user.name
         })
 
         return res.send({token, name: user.name});

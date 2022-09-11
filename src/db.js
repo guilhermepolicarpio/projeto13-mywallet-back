@@ -6,6 +6,6 @@ const mongoClient = new MongoClient(process.env.MONGO_URI);
 
 await mongoClient.connect();
 
-const db = mongoClient.db("dbprojectmywallet")
+const db = mongoClient.db("dbprojectmywallet");
 
 export default db;
