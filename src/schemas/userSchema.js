@@ -14,6 +14,6 @@ password: joi.string().required(),
 })
 
 export const operationSchema = joi.object({
-value: joi.number().integer(),
+value: joi.number().required(),
 description: joi.string().required(),
 })

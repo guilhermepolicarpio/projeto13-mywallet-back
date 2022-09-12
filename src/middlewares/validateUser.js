@@ -8,7 +8,6 @@ export async function validateUser(req,res,next){
     const session = await db.collection("sessions").findOne({token});
 
     if(!session){
-        console.log("falkha na sessao")
         return res.status(401).send("User not found");
     }
     

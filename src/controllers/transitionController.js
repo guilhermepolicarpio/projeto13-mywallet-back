@@ -50,7 +50,6 @@ export async function credit(req,res){
     } 
     
     catch(error){
-    console.log("erro no credito")
     return res.status(500).send(error);
     }
 }
